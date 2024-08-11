@@ -3,7 +3,7 @@
         padding: 0 40px;
     }
 
-    
+
     .imagem.ativa {
         position: fixed;
         width: 100%;
@@ -11,6 +11,7 @@
         left: 0;
 
     }
+
     #bg3 {
         display: none;
     }
@@ -48,6 +49,7 @@
 
     .informacoes .descricao {
         width: 100%;
+        text-align: center;
     }
 
     .conteudo {
@@ -66,4 +68,6 @@
     #bg3 {
         display: none;
     }
+
+
 }

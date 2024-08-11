@@ -3,48 +3,44 @@ const imagens = document.querySelectorAll(".imagem");
 const informacoes = document.querySelectorAll(".informacoes");
 
 botoesCarrossel.forEach((botao, indice) => {
-    botao.addEventListener("click", () => {
+  botao.addEventListener("click", () => {
+    desativarBotaoSelecionado();
 
-        desativarBotaoSelecionado();
+    marcarBotaoSelecionado(botao);
 
+    esconderImagemAtiva();
 
-        marcarBotaoSelecionado(botao);
+    mostrarImagemDeFundo(indice);
 
-        esconderImagemAtiva();
+    esconderInformacoesAtivas();
 
-        mostrarImagemDeFundo(indice);
-
-
-        esconderInformacoesAtivas();
-
-
-        mostrarInformacoes(indice);
-    });
+    mostrarInformacoes(indice);
+  });
 });
 
 function marcarBotaoSelecionado(botao) {
-    botao.classList.add("selecionado");
+  botao.classList.add("selecionado");
 }
 
 function mostrarInformacoes(indice) {
-    informacoes[indice].classList.add("ativa");
+  informacoes[indice].classList.add("ativa");
 }
 
 function esconderInformacoesAtivas() {
-    const informacoesAtiva = document.querySelector(".informacoes.ativa");
-    informacoesAtiva.classList.remove("ativa");
+  const informacoesAtiva = document.querySelector(".informacoes.ativa");
+  informacoesAtiva.classList.remove("ativa");
 }
 
 function mostrarImagemDeFundo(indice) {
-    imagens[indice].classList.add("ativa");
+  imagens[indice].classList.add("ativa");
 }
 
 function esconderImagemAtiva() {
-    const imagemAtiva = document.querySelector(".ativa");
-    imagemAtiva.classList.remove("ativa");
+  const imagemAtiva = document.querySelector(".ativa");
+  imagemAtiva.classList.remove("ativa");
 }
 
 function desativarBotaoSelecionado() {
-    const botaoSelecionado = document.querySelector(".selecionado");
-    botaoSelecionado.classList.remove("selecionado");
+  const botaoSelecionado = document.querySelector(".selecionado");
+  botaoSelecionado.classList.remove("selecionado");
 }
