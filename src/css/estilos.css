@@ -10,9 +10,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -2;
     transform: scaleX(-1);
+    object-fit: cover;
+    width: 100%;
+    display: block;
 }
 
 .carrossel {
@@ -122,12 +124,6 @@ body {
     top: 5vh;
 }
 
-.fundo2 {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
 
 a {
     text-decoration: none;
